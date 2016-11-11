@@ -74,6 +74,7 @@ namespace ApplikationFörKontakter
                     db.SaveChanges();
                 }
                 uppdatelist();
+                sok();
             }
             else
                 MessageBox.Show("Välj en användare!");
@@ -96,6 +97,10 @@ namespace ApplikationFörKontakter
         }
 
         private void btnSök_Click(object sender, EventArgs e)
+        {
+            sok();
+        }
+        private void sok()
         {
             if (textBox1.Text != "")
             {
@@ -120,7 +125,6 @@ namespace ApplikationFörKontakter
                 MessageBox.Show("Skriv in det ord som ska sökas i text rutan");
             }
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedItem != null)
